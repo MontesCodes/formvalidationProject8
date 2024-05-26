@@ -18,21 +18,34 @@
           <div class="row">
             <div class="input-field col s6">
               <label for="firstName">First Name</label>
-              <input type="text" name="First Name" id="firstName" />
+              <input
+                type="text"
+                name="First Name"
+                id="firstName"
+                onfocusout="validateFirstName()"
+              />
               <span class="helper-text"></span>
             </div>
             <div class="input-field col s6">
               <label for="lastName">Last Name</label>
-              <input type="text" name="Last Name" id="lastName" />
+              <input
+                type="text"
+                name="Last Name"
+                id="lastName"
+                onfocusout="validateLastName()"
+              />
               <span class="helper-text"></span>
             </div>
           </div>
           <div class="row">
             <div class="input-field col s6">
               <label for="password">Password</label>
-              <input type="password" name="password" id="password" /><span
-                class="helper-text"
-              ></span>
+              <input
+                type="password"
+                name="password"
+                id="password"
+                onfocusout="validatePassword()"
+              /><span class="helper-text"></span>
             </div>
             <div class="input-field col s6">
               <label for="confirmPassword">Confirm Password</label>
@@ -40,13 +53,19 @@
                 type="password"
                 name="Confirm Password"
                 id="confirmPassword"
+                onfocusout="validateConfirmPassword()"
               /><span class="helper-text"></span>
             </div>
           </div>
           <div class="row">
             <div class="input-field col s12">
               <label for="email">Email</label>
-              <input type="email" name="Email" id="email" />
+              <input
+                type="email"
+                name="Email"
+                id="email"
+                onfocusout="validateEmail()"
+              />
               <span class="helper-text"></span>
             </div>
           </div>
