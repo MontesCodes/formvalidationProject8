@@ -14,7 +14,7 @@
     <div class="container">
       <h1 class="h11">Sign In</h1>
       <div class="row">
-        <form action="" class="col s6" id="myForm">
+        <form action="" class="col s6" id="myForm" novalidate>
           <div class="row">
             <div class="input-field col s6">
               <label for="firstName">First Name</label>
@@ -27,6 +27,32 @@
               <span class="helper-text"></span>
             </div>
           </div>
+          <div class="row">
+            <div class="input-field col s6">
+              <label for="password">Password</label>
+              <input type="password" name="password" id="password" /><span
+                class="helper-text"
+              ></span>
+            </div>
+            <div class="input-field col s6">
+              <label for="confirmPassword">Confirm Password</label>
+              <input
+                type="password"
+                name="Confirm Password"
+                id="confirmPassword"
+              /><span class="helper-text"></span>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12">
+              <label for="email">Email</label>
+              <input type="email" name="Email" id="email" />
+              <span class="helper-text"></span>
+            </div>
+          </div>
+          <button class="btn waves-effect waves-light" type="submit">
+            SignUp
+          </button>
         </form>
         <div class="col s6">
           <img
