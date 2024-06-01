@@ -9,9 +9,11 @@ const confirmPassword = document.getElementById('confirmPassword');
 // Event listener for the form
 const green = '#4CAF60';
 const red = '#F44346';
+const blue = '#2196F3';
 
 // Event listener for the form default behavior
 form.addEventListener('submit', function (event) {
+  // prevent the default behavior of the form
   event.preventDefault();
   if (
     validateFirstName() &&
@@ -20,6 +22,29 @@ form.addEventListener('submit', function (event) {
     validateConfirmPassword() &&
     validateEmail()
   ) {
+    const visitor = firstName.value;
+    const container = document.querySelector('div.container');
+    const loader = document.createElement('div');
+    loader.className = 'progress';
+    const loadingBar = document.createElement('div');
+    loadingBar.className = 'indeterminate';
+    loader.appendChild(loadingBar);
+    container.appendChild(loader);
+
+    setTimeout(function () {
+      const loaderDiv = document.querySelector('div.progress');
+      const panel = document.createElement('div');
+      panel.className = 'card-panel blue';
+      const text = document.createElement('span');
+      text.className = 'black-text';
+      text.appendChild(
+        document.createTextNode(
+          `Your Sign Up was successful, ${visitor}. You will be redirected to the home page shortly.`,
+        ),
+      );
+      panel.appendChild(text);
+      container.replaceChild(panel, loaderDiv);
+    }, 1000);
   }
 });
 
